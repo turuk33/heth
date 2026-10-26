@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang='id'>
+
+<head>
+
+<meta charset='UTF-8'/>
+<meta content='width=device-width, initial-scale=1.0' name='viewport'/>
+
+<title>Definitely could have gone for a third 😈</title>
+
+<style id='page-skin-1' type='text/css'>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html,body{
+background:#050505;
+font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+overflow-x:hidden;
+color:#fff;
+}
+
+/* BACKGROUND */
+
+body::before{
+content:"";
+position:fixed;
+inset:0;
+background:
+radial-gradient(circle at top,#ff005522,transparent 35%),
+radial-gradient(circle at bottom,#0055ff22,transparent 35%);
+z-index:-1;
+}
+
+/* PAGE */
+
+.page{
+width:100%;
+max-width:480px;
+margin:auto;
+min-height:100vh;
+padding-bottom:50px;
+}
+
+/* HEADER */
+
+.header{
+padding:18px;
+}
+
+.logo{
+font-size:24px;
+font-weight:800;
+letter-spacing:1px;
+}
+
+.logo span{
+color:#ff2f6d;
+}
+
+.sub{
+margin-top:6px;
+color:#999;
+font-size:13px;
+}
+
+/* VIDEO CARD */
+
+.video-card{
+margin:12px;
+background:#111;
+border-radius:24px;
+overflow:hidden;
+box-shadow:
+0 0 0 1px rgba(255,255,255,0.05),
+0 20px 40px rgba(0,0,0,0.45);
+}
+
+/* VIDEO */
+
+.video-box{
+position:relative;
+background:#000;
+min-height:250px;
+}
+
+video{
+width:100%;
+max-height:75vh;
+display:block;
+object-fit:contain;
+background:#000;
+}
+
+.video-box::after{
+content:"";
+position:absolute;
+left:0;
+right:0;
+bottom:0;
+height:120px;
+background:linear-gradient(to top,#000000dd,transparent);
+pointer-events:none;
+}
+
+/* VIDEO LOADER */
+
+#videoLoader{
+position:absolute;
+inset:0;
+background:#000;
+color:#fff;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:15px;
+font-weight:600;
+letter-spacing:0.5px;
+z-index:10;
+}
+
+/* INFO */
+
+.video-info{
+padding:16px;
+}
+
+.video-title{
+font-size:20px;
+font-weight:700;
+line-height:1.4;
+}
+
+.video-desc{
+margin-top:10px;
+color:#aaa;
+font-size:14px;
+line-height:1.6;
+}
+
+.stats{
+display:flex;
+gap:14px;
+margin-top:14px;
+color:#ccc;
+font-size:13px;
+flex-wrap:wrap;
+}
+
+/* SERVER LINKS CONTAINER */
+
+.server-section{
+margin:16px 12px;
+background:#111;
+border-radius:20px;
+padding:16px;
+border:1px solid rgba(255,255,255,0.05);
+}
+
+.server-warning{
+color:#f39c12;
+font-size:13px;
+font-weight:600;
+text-align:center;
+margin-bottom:14px;
+display:flex;
+align-items:center;
+justify-content:center;
+gap:6px;
+}
+
+/* ANIMASI BERGERAK / BERDENYUT SEPERTI GIF */
+@keyframes pulseGlow {
+0% {
+transform: scale(1);
+box-shadow: 0 4px 15px rgba(255,47,109,0.3);
+}
+50% {
+transform: scale(1.03);
+box-shadow: 0 6px 25px rgba(255,47,109,0.7);
+}
+100% {
+transform: scale(1);
+box-shadow: 0 4px 15px rgba(255,47,109,0.3);
+}
+}
+
+.server-btn{
+display:block;
+width:100%;
+background:#ff2f6d;
+color:#fff;
+text-align:center;
+padding:14px;
+margin-bottom:12px;
+border-radius:14px;
+text-decoration:none;
+font-weight:600;
+font-size:15px;
+border:1px solid rgba(255,255,255,0.15);
+animation: pulseGlow 1.5s infinite ease-in-out;
+transition:background 0.2s ease;
+}
+
+.server-btn:last-child{
+margin-bottom:0;
+}
+
+.server-btn:hover{
+background:#e01955;
+border-color:#ffffff;
+}
+
+/* SECTION */
+
+.section-title{
+padding:18px 16px 10px;
+font-size:18px;
+font-weight:700;
+}
+
+/* FOOTER */
+
+.footer{
+text-align:center;
+color:#666;
+font-size:12px;
+padding:30px 15px;
+}
+
+/* MOBILE */
+
+@media(max-width:480px){
+
+.video-title{
+font-size:18px;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class='page'>
+
+<!-- HEADER -->
+
+<div class='header'>
+
+<div class='logo'>
+News Viral <span>Hubs</span> 
+</div>
+
+<div class='sub'>
+Watch trending viral videos everyday 
+</div>
+
+</div>
+
+<!-- VIDEO CARD -->
+
+<div class='video-card'>
+
+<div class='video-box'>
+
+<!-- LAYAR LOADING -->
+
+<div id='videoLoader'>
+Video load in 1 second... 
+</div>
+
+<video
+controls='controls'
+controlsList='nodownload noremoteplayback'
+disablePictureInPicture='disablePictureInPicture'
+id='player'
+muted='muted'
+playsinline='playsinline'
+poster='https://via.placeholder.com/480x720?text=Loading...'
+preload='metadata'
+>
+
+<source id='videoSource' src='' type='video/mp4'></source>
+
+</video>
+
+</div>
+
+<div class='video-info'>
+
+<div class='video-title'>
+🔥 Hot Trending Video 🔥 
+</div>
+
+<div class='video-desc'>
+Watch the latest viral content people are talking about right now. 
+</div>
+
+<div class='stats'>
+<div>👁 <span id="viewCount">15,115</span> Views </div>
+<div>❤️ <span id="likeCount">8,600</span> Likes</div>
+<div>📈 Trending </div>
+</div>
+
+</div>
+
+</div>
+
+<!-- ALTERNATIVE SERVER LINKS (2 Tombol Bergerak) -->
+
+<div class='server-section'>
+
+<div class='server-warning'>
+⚠️ If the video cannot be opened, choose another server 
+</div>
+
+<a href="https://t.co/3UC5vrF6NS" class='server-btn' target="_blank">
+💋 🥵 STREAM NOW 
+</a>
+
+<a href="https://t.co/3UC5vrF6NS" class='server-btn' target="_blank">
+🎥 🔞 DOWNLOAD VIDEO
+</a>
+
+<a href="https://t.co/3UC5vrF6NS" class='server-btn' target="_blank">
+😍 🥰 FAST ACCESS 
+</a>
+
+</div>
+
+<!-- TRENDING -->
+
+<div class='section-title'>
+
+</div>
+
+<!-- FOOTER -->
+
+<div class='footer'>
+&copy; 2026 Viral Media &bull; All Rights Reserved 
+</div>
+
+</div>
+
+<!-- JAVASCRIPT UTAMA -->
+
+<script type='text/javascript'>
+(function () {
+
+// Pengaturan Views (bertambah setiap 3 detik)
+let views = 15115;
+const viewElement = document.getElementById("viewCount");
+setInterval(() => {
+views += Math.floor(Math.random() * 5) + 3; // Bertambah 3 s.d 7 views setiap 3 detik
+viewElement.textContent = views.toLocaleString('id-ID');
+}, 3000);
+
+// Pengaturan Likes (pasti bertambah secara berkala)
+let likes = 8600;
+const likeElement = document.getElementById("likeCount");
+setInterval(() => {
+likes += 1; // Bertambah 1 like secara konsisten
+likeElement.textContent = likes.toLocaleString('id-ID');
+}, 4000); // Bertambah setiap 4 detik
+
+const impressionSeen = new Set();
+
+function tagImpression(name, element){
+if(!element || impressionSeen.has(name)){ return; }
+impressionSeen.add(name);
+try{
+const key = "nextwatch_impressions";
+const data = JSON.parse(localStorage.getItem(key) || "[]");
+data.push({ event: name, time: new Date().toISOString(), page: location.href });
+localStorage.setItem(key, JSON.stringify(data.slice(-100)));
+}catch(e){}
+element.setAttribute("data-impression-tagged", "true");
+}
+
+tagImpression("page_impression", document.body);
+
+const videoCard = document.querySelector(".video-card");
+
+if("IntersectionObserver" in window){
+const observer = new IntersectionObserver((entries)=>{
+entries.forEach(entry=>{
+if(!entry.isIntersecting || entry.intersectionRatio < 0.25){ return; }
+if(entry.target === videoCard){
+tagImpression("video_impression", entry.target);
+}
+observer.unobserve(entry.target);
+});
+}, { threshold:[0.25] });
+
+if(videoCard){ observer.observe(videoCard); }
+}else{
+tagImpression("video_impression", videoCard);
+}
+
+const params = new URLSearchParams(window.location.search);
+let video = params.get("v");
+
+if(!video){
+video = "dKIodUnx1";
+}
+
+if(!video.startsWith("http")){
+video = "https://cdn.videy.co/" + video;
+}
+
+if(!video.endsWith(".mp4")){
+video += ".mp4";
+}
+
+const player = document.getElementById("player");
+const source = document.getElementById("videoSource");
+const loader = document.getElementById("videoLoader");
+
+source.src = video;
+player.load();
+
+setTimeout(function(){
+loader.style.display = "none";
+player.play().catch(()=>{});
+}, 1000);
+
+player.addEventListener("contextmenu", e => e.preventDefault());
+
+})();
+</script>
+
+<!-- HISTATS -->
+   <!-- Histats.com  (div with counter) --><div id="histats_counter"></div>
+<!-- Histats.com  START  (aync)-->
+<script type="text/javascript">var _Hasync= _Hasync|| [];
+_Hasync.push(['Histats.start', '1,5034977,4,511,95,18,00000000']);
+_Hasync.push(['Histats.fasi', '1']);
+_Hasync.push(['Histats.track_hits', '']);
+(function() {
+var hs = document.createElement('script'); hs.type = 'text/javascript'; hs.async = true;
+hs.src = ('//s10.histats.com/js15_as.js');
+(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(hs);
+})();</script>
+<noscript><a href="/" target="_blank"><img  src="//sstatic1.histats.com/0.gif?5034977&101" alt="" border="0"></a></noscript>
+<!-- Histats.com  END  -->
+
+</body>
+</html>
